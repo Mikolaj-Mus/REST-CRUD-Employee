@@ -1,7 +1,6 @@
 package com.mikolaj.springboot.cruddemo.entity;
 
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name = "employee")
@@ -9,8 +8,8 @@ public class Employee {
 
     // define fields
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
     private int id;
     @Column(name = "first_name")
     private String firstName;
